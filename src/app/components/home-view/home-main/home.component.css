@@ -1,0 +1,16 @@
+#intro {
+    background-image: url("../../../../assets/img/main.jpg");
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+
+      /* Height for devices larger than 576px */
+@media (min-width: 992px) {
+#intro {
+    margin-top: -58.59px;
+}
+}
+
+
