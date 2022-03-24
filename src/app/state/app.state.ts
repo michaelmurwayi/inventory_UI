@@ -4,6 +4,7 @@ import { AppStateModel } from "./app.model";
 
 const APP_STATE_TOKEN = new StateToken<AppStateModel>('appState');
 
+
 @State<AppStateModel>({
     name: APP_STATE_TOKEN,
     default:{
