@@ -6,4 +6,5 @@ export interface AppStateModel {
     appStack: Array<any>;
     totalStock:number;
     empties:number;
+    token: string;
 }
