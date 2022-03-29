@@ -8,11 +8,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeMainComponent } from './components/home-view/home-main/home-main.component';
 import { HomeNavComponent } from './components/home-view/home-nav/home-nav.component';
-import { StockListComponent } from './stock-view/stock-list/stock-list.component';
-import { CartComponent } from './stock-view/cart/cart.component';
+import { StockListComponent } from './components/stock-view/stock-list/stock-list.component';
+import { CartComponent } from './components/stock-view/cart/cart.component';
 import { HomeComponent } from './components/home/home.component';
-
-// import { HomeFooterComponent } from './components/home-view/home-view/home-footer/home-footer.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { StockComponent } from './components/stock/stock.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +21,10 @@ import { HomeComponent } from './components/home/home.component';
     HomeMainComponent,
     HomeNavComponent,
     StockListComponent,
-    CartComponent
+    CartComponent,
+    DashboardComponent,
+    StockComponent,
+
   ],
   imports: [
     BrowserModule,
