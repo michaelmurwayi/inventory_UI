@@ -1,0 +1,29 @@
+#intro {
+    background-image: url("https://raw.githubusercontent.com/paulwababu/Inventory_management_system/master/djangoproject/stockmgmgt/static/img/slider-1.jpg");
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+
+h1{
+    color: black;
+    font-size: 50px;
+    font-weight: 900;
+}
+h5{
+    color: black;
+    font-size: 30px;
+    font-weight: 900;
+}
+
+
+      /* Height for devices larger than 576px */
+@media (min-width: 992px) {
+#intro {
+    margin-top: -58.59px;
+}
+}
+
+
+
