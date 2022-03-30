@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Store } from '@ngxs/store';
+import { AppState } from 'src/app/state/app.state';
+import { Product } from 'src/app/models/Product';
 
 @Component({
   selector: 'app-stock',
@@ -7,9 +10,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StockComponent implements OnInit {
 
-  constructor() { }
+  stocks?: Array<Product> = []
+
+  constructor(private store: Store) { }
 
   ngOnInit(): void {
+    this.store.select(AppState.getStocks).subscribe(stocks =>{
+      this.stocks = stocks;
+    })
   }
 
 }
