@@ -14,6 +14,7 @@ import { HomeComponent } from './components/home/home.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { StockComponent } from './components/stock/stock.component';
 import { ProductComponent } from './components/stock-view/product/product.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { ProductComponent } from './components/stock-view/product/product.compon
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     NgxsModule.forRoot([AppState], {
       developmentMode: !environment.production
     }),
