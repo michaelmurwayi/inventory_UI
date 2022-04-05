@@ -15,6 +15,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { StockComponent } from './components/stock/stock.component';
 import { ProductComponent } from './components/stock-view/product/product.component';
 import { HttpClientModule } from '@angular/common/http';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    MatGridListModule,
     NgxsModule.forRoot([AppState], {
       developmentMode: !environment.production
     }),

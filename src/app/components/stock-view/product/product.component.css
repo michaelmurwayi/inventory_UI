@@ -1,0 +1,15 @@
+.Product{
+    border-radius: 0px;
+    overflow-y: auto;
+    background-image: url();    
+}
+
+.Product-info{
+    background-color: rgba(0, 0, 0, 0.8);
+    position: inherit; 
+    color: silver;
+    font-weight: bolder;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+
+}

@@ -1,7 +1,16 @@
-<section style="background-color: #eee;">
-    <div class="row justify-content-left">
-        <div class="container py-5 row" *ngFor="let stock of stocks">
+<section style="background-color: #eee; position: absolute; left: 0px; height: 100vh; width: 60vw; overflow-y: auto; background-image: url(https://i.pinimg.com/originals/39/cf/bc/39cfbc81276720ddf5003854e42c2769.jpg);">
+
+    <mat-grid-list cols="4"  rowHeight="50vh">
+        <ng-container  *ngFor="let stock of stocks">
+            <mat-grid-tile>
             <app-product class="col-md-12"></app-product>
-        </div>
-    </div>
+        </mat-grid-tile>
+    </ng-container>
+
+    </mat-grid-list>
+
+        <!-- </div>
+    </div> -->
 </section>
+
+
