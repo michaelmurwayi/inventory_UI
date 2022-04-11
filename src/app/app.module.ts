@@ -23,7 +23,8 @@ import { LinegraphComponent } from './components/admin/linegraph/linegraph.compo
 import { MapComponent } from './components/admin/map/map.component';
 import { AdmindashboardComponent } from './components/admin/admindashboard/admindashboard.component';
 import { ChartsModule, WavesModule } from 'angular-bootstrap-md';
-import { AsideComponent } from './components/admin/aside/aside.component'
+import { AsideComponent } from './components/admin/aside/aside.component';
+import { CardComponent } from './components/admin/card/card.component'
 
 
 @NgModule({
@@ -44,6 +45,7 @@ import { AsideComponent } from './components/admin/aside/aside.component'
     MapComponent,
     AdmindashboardComponent,
     AsideComponent,
+    CardComponent,
 
 
   ],
