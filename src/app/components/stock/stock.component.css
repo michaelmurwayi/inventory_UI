@@ -1,0 +1,5 @@
+.cart{
+    width: 500px;
+    scroll-behavior:smooth;
+    overflow-y: hidden;
+}

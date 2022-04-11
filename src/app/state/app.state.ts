@@ -19,6 +19,10 @@ const APP_STATE_TOKEN = new StateToken<AppStateModel>('appState');
             {"product_name": "product"},
             { "product_name": "product"},
             {"product_name": "product"},
+            { "product_name": "product" },
+            {"product_name": "product"},
+            { "product_name": "product"},
+            {"product_name": "product"},
             {"product_name": "product"},
 
         ],

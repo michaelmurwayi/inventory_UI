@@ -1,16 +1,16 @@
 <div class="container-fluid date mt-5 row">
-    <div class="col-md-6" style="font-size: 30px; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-weight: 900;">
+    <div class="col-md-6 black " style="color: whitesmoke; font-size: 30px; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-weight: 900;">
         <p> {{ myDate   | date: "mm-dd-yyyy "}} </p>
     </div>
-    <div class="col-md-6" style="color:dodgerblue; font-size: 30px; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-weight: 900;">
+    <div class="col-md-6" style="color:black; font-size: 30px; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-weight: 900;">
         <p> {{ myDate   | date: "hh:mm:ss "}} </p>
     </div>
 </div>
 <section>
-    <div class="p-5 text-center bg-light" >
-        <h1 class="" style="font-weight: 900;">Shopping Cart</h1>
+    <div class="p-2 text-center bg-light" >
+        <h1 class="" style="font-weight: 900;">Cart</h1>
     </div>
-    <div class="spacer">
+    <div class="spacer" style="scroll-behavior: auto;">
         <div class="container">
         <div class="row mt-5">
             <div class="col-lg-9">
@@ -45,5 +45,27 @@
             </div>
         </div>
         </div>
+
     </div>
+    <div class="mt-5 col-md-12 row">
+                <div class=" card col-md-4 ml-0 p-2 row">
+                    <div class="col-xs-6">
+                        <h5><strong>Total Sales</strong></h5>
+                        <hr>
+                    </div>
+                </div>
+                <div class=" card col-md-4 ml-4 p-2 row">
+                    <div class="col-xs-6">
+                        <h5><strong>Empties</strong></h5>
+                        <hr>
+                    </div>
+                </div>
+                <div class="card col-md-3 ml-4 p-2 row">
+                    <div class="col-xs-6">
+                        <h5><strong>Shells</strong></h5>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        
 </section>
