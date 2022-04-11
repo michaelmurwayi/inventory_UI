@@ -16,6 +16,12 @@ import { StockComponent } from './components/stock/stock.component';
 import { ProductComponent } from './components/stock-view/product/product.component';
 import { HttpClientModule } from '@angular/common/http';
 import {MatGridListModule} from '@angular/material/grid-list';
+import { SidenavComponent } from './components/admin/sidenav/sidenav.component';
+import { ContainerComponent } from './components/admin/container/container.component';
+import { BargraphComponent } from './components/admin/bargraph/bargraph.component';
+import { LinegraphComponent } from './components/admin/linegraph/linegraph.component';
+import { MapComponent } from './components/admin/map/map.component';
+import { AdmindashboardComponent } from './components/admin/admindashboard/admindashboard.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +34,12 @@ import {MatGridListModule} from '@angular/material/grid-list';
     DashboardComponent,
     StockComponent,
     ProductComponent,
+    SidenavComponent,
+    ContainerComponent,
+    BargraphComponent,
+    LinegraphComponent,
+    MapComponent,
+    AdmindashboardComponent,
 
   ],
   imports: [
