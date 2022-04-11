@@ -13,6 +13,16 @@ const APP_STATE_TOKEN = new StateToken<AppStateModel>('appState');
         appName: "Stock Management",
         stock: [
             {"product_name": "product"},
+            { "product_name": "product"},
+            {"product_name": "product"},
+            { "product_name": "product"},
+            {"product_name": "product"},
+            { "product_name": "product"},
+            {"product_name": "product"},
+            { "product_name": "product" },
+            {"product_name": "product"},
+            { "product_name": "product"},
+            {"product_name": "product"},
             {"product_name": "product"},
 
         ],

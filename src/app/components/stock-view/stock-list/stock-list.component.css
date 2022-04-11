@@ -1,0 +1,13 @@
+.stock-list{
+    background-color: #eee; 
+    position: absolute; 
+    left: 0px; 
+    height: 100vh; 
+    width: 60vw; 
+    overflow-y: auto; 
+    background-image: url(https://i.pinimg.com/originals/39/cf/bc/39cfbc81276720ddf5003854e42c2769.jpg);
+}
+
+.stock-list::-webkit-scrollbar{
+    display: none;
+}

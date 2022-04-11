@@ -1,7 +1,14 @@
-<section style="background-color: #eee;">
-    <div class="row justify-content-left">
-        <div class="container py-5 row" *ngFor="let stock of stocks">
+<section class="stock-list" >
+
+    <mat-grid-list cols="4"  rowHeight="50vh">
+        <ng-container  *ngFor="let stock of stocks">
+            <mat-grid-tile>
             <app-product class="col-md-12"></app-product>
-        </div>
-    </div>
+        </mat-grid-tile>
+    </ng-container>
+
+    </mat-grid-list>
+
 </section>
+
+

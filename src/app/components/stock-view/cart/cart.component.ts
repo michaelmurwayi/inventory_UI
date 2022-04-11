@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CartComponent implements OnInit {
 
+  myDate?: any;
+  time ?: any ;
+
   constructor() { }
 
   ngOnInit(): void {
+    this.myDate = new Date();
   }
 
 }
