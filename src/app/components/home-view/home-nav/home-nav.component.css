@@ -1,3 +1,8 @@
 .navbar .nav-link {
-    color: black !important;
+    color: whitesmoke !important;
+}
+
+li.a{
+    float: left;
+    text-align: center;
 }
