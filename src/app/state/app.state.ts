@@ -12,19 +12,40 @@ const APP_STATE_TOKEN = new StateToken<AppStateModel>('appState');
     defaults:{
         appName: "Stock Management",
         stock: [
-            {"product_name": "product"},
-            { "product_name": "product"},
-            {"product_name": "product"},
-            { "product_name": "product"},
-            {"product_name": "product"},
-            { "product_name": "product"},
-            {"product_name": "product"},
-            { "product_name": "product" },
-            {"product_name": "product"},
-            { "product_name": "product"},
-            {"product_name": "product"},
-            {"product_name": "product"},
-
+            {
+                "product_name": "product",
+                "Quantity": 100
+            },
+            {
+                "product_name": "product",
+                "Quantity": 100
+            },
+            {
+                "product_name": "product",
+                "Quantity": 100
+            },
+            {
+                "product_name": "product",
+                "Quantity": 100
+            },
+            {
+                "product_name": "product",
+                "Quantity": 100
+            },
+            {
+                "product_name": "product",
+                "Quantity": 100
+            },
+            {
+                "product_name": "shell",
+                "Quantity": 100
+            },
+            {
+                "product_name": "Empties",
+                "Quantity": 80
+            },
+            
+            
         ],
         isLoading: false,
         errors:[],
@@ -68,17 +89,22 @@ export class AppState{
         let empties = 0;
         
         const state = ctx.getState();
-        console.log(state , 'state');
-        // ctx.getState().stock.forEach(stock => {
-        //     totalStock += stock.stock;
-        //     totalProducts += 1;
-        //     if(stock.product_name === 'shell'){
-        //         shells += 1;
-        //     }
-        //     if(stock.product_name === 'empty'){
-        //         empties += 1;
-        //     }
-        // });
+        console.log(state.stock, 'state');
+        
+        state.stock && state.stock.forEach(stock => {
+            if (stock.product_name === 'shell' || stock.product_name === 'Empties') { 
+                totalStock = totalStock;
+            } else {
+                totalStock += stock.Quantity;
+                totalProducts += 1;
+            }
+            if(stock.product_name === 'shell'){
+                shells = stock.Quantity;
+            }
+            if(stock.product_name === 'Empties'){
+                empties = stock.Quantity;
+            }
+        });
         ctx.patchState({
             totalStock: totalStock,
             totalProducts: totalProducts,
@@ -91,9 +117,20 @@ export class AppState{
     static getStocks(state: AppStateModel) {
         return state.stock;
         }
+    
     @Selector()
     static getTotalStock(state: AppStateModel) {
         return state.totalStock;
+    }
+    
+    @Selector()
+    static getShells(state: AppStateModel) {
+        return state.shells;
+    }
+
+    @Selector()
+    static getEmpties(state: AppStateModel) {
+        return state.empties;
     }
 }
 
