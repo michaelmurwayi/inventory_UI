@@ -4,49 +4,38 @@ import { AppStateModel } from "./app.model";
 import { GetAllStocks, GetTotalStocks } from "./app.actions";
 import { ApiResponse } from "../models/api.model/api.response";
 import { StockService } from "../services/stock.service";
-
+import { Product } from "../models/Product";
 const APP_STATE_TOKEN = new StateToken<AppStateModel>('appState');
 
 @State<AppStateModel>({
     name: APP_STATE_TOKEN,
     defaults:{
         appName: "Stock Management",
-        stock: [
+        stocks:  [
             {
-                "product_name": "product",
-                "Quantity": 100
+                "id":1,
+                "product_name": "200ml",
+                "product_price": 23.00,
+                "quantity": 30
             },
             {
-                "product_name": "product",
-                "Quantity": 100
+                "id":2,
+                "product_name": "300ml",
+                "product_price": 30.00,
+                "quantity": 319
             },
             {
-                "product_name": "product",
-                "Quantity": 100
+                "id":1,
+                "product_name": "500ml",
+                "product_price": 40.00,
+                "quantity": 269
             },
             {
-                "product_name": "product",
-                "Quantity": 100
-            },
-            {
-                "product_name": "product",
-                "Quantity": 100
-            },
-            {
-                "product_name": "product",
-                "Quantity": 100
-            },
-            {
-                "product_name": "shell",
-                "Quantity": 100
-            },
-            {
-                "product_name": "Empties",
-                "Quantity": 80
-            },
-            
-            
-        ],
+                "id":1,
+                "product_name": "1ltr glass",
+                "product_price": 80.00,
+                "quantity": 30
+            }],
         isLoading: false,
         errors:[],
         appStack: [],
@@ -62,7 +51,7 @@ const APP_STATE_TOKEN = new StateToken<AppStateModel>('appState');
 
 @Injectable()
 export class AppState{
-    
+
     constructor(private stockService: StockService){}
 
     private pushToStack(ctx: StateContext<AppStateModel>, value: any) {
@@ -70,39 +59,39 @@ export class AppState{
             appStack: [...ctx.getState().appStack, value]
         })
     }
-    
+
     @Action(GetAllStocks)
     getAllStock(ctx: StateContext<AppStateModel>) {
         this.stockService.getStocks().subscribe((response: ApiResponse) => {
             ctx.patchState({
-                stock: response.data,
+                stocks: response.data,
                 totalProducts: response.data.length,
             });
 
         });
 }
     @Action(GetTotalStocks)
-    getTotalStock(ctx: StateContext<AppStateModel>) { 
+    getTotalStock(ctx: StateContext<AppStateModel>) {
         let totalStock = 0;
         let totalProducts = 0;
         let shells = 0;
         let empties = 0;
-        
+
         const state = ctx.getState();
-        console.log(state.stock, 'state');
-        
-        state.stock && state.stock.forEach(stock => {
-            if (stock.product_name === 'shell' || stock.product_name === 'Empties') { 
+        console.log(state.stocks, 'state');
+
+        state.stocks && state.stocks.forEach(stocks => {
+            if (stocks.product_name === 'shell' || stocks.product_name === 'Empties') {
                 totalStock = totalStock;
             } else {
-                totalStock += stock.Quantity;
+                totalStock += stocks.Quantity;
                 totalProducts += 1;
             }
-            if(stock.product_name === 'shell'){
-                shells = stock.Quantity;
+            if(stocks.product_name === 'shell'){
+                shells = stocks.Quantity;
             }
-            if(stock.product_name === 'Empties'){
-                empties = stock.Quantity;
+            if(stocks.product_name === 'Empties'){
+                empties = stocks.Quantity;
             }
         });
         ctx.patchState({
@@ -112,17 +101,17 @@ export class AppState{
             empties: empties,
         });
     }
-    
+
     @Selector()
     static getStocks(state: AppStateModel) {
-        return state.stock;
+        return state.stocks;
         }
-    
+
     @Selector()
     static getTotalStock(state: AppStateModel) {
         return state.totalStock;
     }
-    
+
     @Selector()
     static getShells(state: AppStateModel) {
         return state.shells;
