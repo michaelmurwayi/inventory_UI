@@ -11,12 +11,13 @@ import { AppState } from 'src/app/state/app.state';
 export class StockListComponent implements OnInit {
 
   stocks?: Array<Product> = [];
-  
+
   constructor(private store: Store) { }
 
   ngOnInit(): void {
     this.store.select(AppState.getStocks).subscribe(stocks =>{
       this.stocks = stocks;
+      console.log(this.stocks)
     })
   }
 

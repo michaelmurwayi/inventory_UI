@@ -1,15 +1,88 @@
-.Product{
-    border-radius: 0px;
-    overflow-y: auto;
-    background-image: url();    
+@import url("https://fonts.googleapis.com/css2?family=Istok+Web:wght@400;700&display=swap");
+
+.card {
+  position: relative;
+  background: #161B21;
+  border-radius: 20px;
+  overflow: hidden;
 }
 
-.Product-info{
-    background-color: rgba(0, 0, 0, 0.8);
-    position: inherit; 
-    color: silver;
-    font-weight: bolder;
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
+.card::before {
+  content: "";
+  position: absolute;
+  top: -35%;
+  width: 100%;
+  height: 100%;
+  background: grey;
+  transform: skewY(345deg);
+  transition: 0.5s;
+}
 
+.card:hover::before {
+  top: -20%;
+  transform: skewY(390deg);
+}
+
+.card::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-weight: 600;
+  font-size: 6em;
+  color: rgba(0, 0, 0, 0.1);
+}
+
+
+.card .contentBox {
+    position: relative;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 2;
+}
+
+.labelText {
+  /* font-size: 18px; */
+  color: #FDF5A6;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.labelValue{
+  font-weight: bolder;
+}
+
+.card .contentBox .price {
+  font-size: 24px;
+  color: #FDF5A6;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.card .contentBox .buy {
+  position: relative;
+  top: 100px;
+  opacity: 0;
+  padding: 10px 30px;
+  margin-top: 15px;
+  color: #000000;
+  text-decoration: none;
+  background: #FDF5A6;
+  border-radius: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: 0.5s;
+}
+
+.card:hover .contentBox .buy {
+  top: 0;
+  opacity: 1;
+}
+
+.mouse {
+    height: 300px;
+    width: auto;
 }
