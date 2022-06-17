@@ -1,20 +1,12 @@
-<div>
-    <div class="card">
+<app-home-nav></app-home-nav>
 
-        <app-home-nav></app-home-nav>
+<div class="row">
+    <div class="col-md-8">
+        <app-stock-list></app-stock-list>
     </div>
-    <div class="col-md-12 row">
-
-        <div class="col-md-8 mr-0" >
-            <app-stock-list></app-stock-list>
-        </div>
-        <div class="">
-            <div class=" cart col-md-12 mt-2">
-                
-                <app-cart></app-cart>
-            </div>
-
-        </div>
+    <div class="col-md-4">
+        <app-cart></app-cart>
     </div>
+
 </div>
 <router-outlet></router-outlet>

@@ -45,7 +45,7 @@
 
 .labelText {
   /* font-size: 18px; */
-  color: #FDF5A6;
+  color: black;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -53,6 +53,7 @@
 
 .labelValue{
   font-weight: bolder;
+  color: #FDF5A6;
 }
 
 .card .contentBox .price {

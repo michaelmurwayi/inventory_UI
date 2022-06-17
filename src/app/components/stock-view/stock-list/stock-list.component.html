@@ -1,13 +1,7 @@
-<section class="stock-list mt-5" >
-
-    <mat-grid-list cols="4"  rowHeight="30vh">
-        <ng-container *ngFor="let product of stocks">
-            <mat-grid-tile>
-            <app-product class="col-md-12"  [product]="product" ></app-product>
-        </mat-grid-tile>
-    </ng-container>
-
-    </mat-grid-list>
+<section class="stock-list mt-5">
+        <div class="col-md-12 container-fluid row">
+            <app-product *ngFor="let product of stocks" [product]="product" ></app-product>
+        </div>
 
 </section>
 

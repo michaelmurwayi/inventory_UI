@@ -35,7 +35,56 @@ const APP_STATE_TOKEN = new StateToken<AppStateModel>('appState');
                 "product_name": "1ltr glass",
                 "product_price": 80.00,
                 "quantity": 30
-            }],
+            },
+            {
+                "id":1,
+                "product_name": "200ml",
+                "product_price": 23.00,
+                "quantity": 30
+            },
+            {
+                "id":2,
+                "product_name": "300ml",
+                "product_price": 30.00,
+                "quantity": 319
+            },
+            {
+                "id":1,
+                "product_name": "500ml",
+                "product_price": 40.00,
+                "quantity": 269
+            },
+            {
+                "id":1,
+                "product_name": "1ltr glass",
+                "product_price": 80.00,
+                "quantity": 30
+            },
+            {
+                "id":1,
+                "product_name": "200ml",
+                "product_price": 23.00,
+                "quantity": 30
+            },
+            {
+                "id":2,
+                "product_name": "300ml",
+                "product_price": 30.00,
+                "quantity": 319
+            },
+            {
+                "id":1,
+                "product_name": "500ml",
+                "product_price": 40.00,
+                "quantity": 269
+            },
+            {
+                "id":1,
+                "product_name": "1ltr glass",
+                "product_price": 80.00,
+                "quantity": 30
+            }
+        ],
         isLoading: false,
         errors:[],
         appStack: [],
