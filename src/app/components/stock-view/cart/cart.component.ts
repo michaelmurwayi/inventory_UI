@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CartService } from 'src/app/services/cart.service';
+import { Cart } from 'src/app/models/Cart';
 
 @Component({
   selector: 'app-cart',
@@ -8,12 +10,21 @@ import { Component, OnInit } from '@angular/core';
 export class CartComponent implements OnInit {
 
   myDate?: any;
-  time ?: any ;
+  time?: any;
+  cart : any;
 
-  constructor() { }
+  constructor(private CartService: CartService) { }
+
+  getCart() {
+    this.cart = this.CartService.getCart();
+    return this.cart;
+  }
 
   ngOnInit(): void {
     this.myDate = new Date();
+    this.cart = this.getCart();
+    console.log("cart is ", this.cart)
+
   }
 
 }

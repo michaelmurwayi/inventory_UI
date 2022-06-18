@@ -29,35 +29,18 @@
                         <label for="">Total</label>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row" *ngFor="let items of cart">
                     <div class="col-md-3">
-                        <p type="text" style=" font-weight: bold; text-align: center; border: 10px solid gold ;  border-radius: 50%; height: 45px; width: 50px;">4</p>
+                        <p type="text" style=" font-weight: bold; text-align: center; border: 10px solid gold ;  border-radius: 50%; height: 45px; width: 50px;">{{ items?.quantity }}</p>
                     </div>
                     <div class="col-md-3">
-                        <p type="text"><small><b>200ml</b></small></p>
+                        <p type="text"><small><b>{{ items?.product }}</b></small></p>
                     </div>
                     <div class="col-md-3">
-                        <p type="text"><small><b>23.00ksh</b></small></p>
+                        <p type="text"><small><b>{{ items?.price }}</b></small></p>
                     </div>
                     <div class="col-md-3">
-                        <p><small><b>92.00ksh</b></small></p>
-                    </div>
-
-
-                </div>
-                <hr>
-                <div class="row">
-                    <div class="col-md-3">
-                        <p type="text" style=" font-weight: bold; text-align: center; border: 10px solid gold ;  border-radius: 50%; height: 45px; width: 50px;">4</p>
-                    </div>
-                    <div class="col-md-3">
-                        <p type="text"><small><b>200ml</b></small></p>
-                    </div>
-                    <div class="col-md-3">
-                        <p type="text"><small><b>23.00ksh</b></small></p>
-                    </div>
-                    <div class="col-md-3">
-                        <p><small><b>92.00ksh</b></small></p>
+                        <p><small><b>{{ items?.quantity * items?.price }}</b></small></p>
                     </div>
 
 

@@ -12,3 +12,7 @@ export class GetAllStocks {
 export class GetTotalStocks{
     static readonly type = '[TotalStock] Get Total Stock';
 }
+
+export class GetCart{
+    static readonly type = '[Cart] Get Cart';
+}
