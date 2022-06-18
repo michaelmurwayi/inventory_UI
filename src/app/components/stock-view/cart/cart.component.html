@@ -1,16 +1,14 @@
 <section class="side-nav col-md-12" >
         <div class="container-fluid date row">
             <div class="col-md-6 black" style="text-align: center; opacity: 0.9; color: #FDF5A6; font-size: 30px; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-weight:bold;">
-                <p> {{ myDate   | date: "mm-dd-yyyy "}} </p>
+                <p> CART </p>
             </div>
             <div class="col-md-6" style="text-align: center; color:black; font-size: 30px; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-weight: 900;">
                 <p> {{ myDate   | date: "hh:mm:ss "}} </p>
             </div>
         </div>
         <div class="container-fluid row" style="text-align:center; margin-top: 10px;">
-            <div class="col-md-12">
-                <h3 style="font-weight:900" >CART</h3>
-            </div>
+
         </div>
         <hr style="border: 10px solid grey;">
         <div>
@@ -40,7 +38,7 @@
                         <p type="text"><small><b>{{ items?.price }}</b></small></p>
                     </div>
                     <div class="col-md-3">
-                        <p><small><b>{{ items?.quantity * items?.price }}</b></small></p>
+                        <p><small><b class="total" >{{ items?.quantity * items?.price }}</b></small></p>
                     </div>
 
 
@@ -54,20 +52,20 @@
                         <p style="color: gold; font-weight:bold;">Sub Total </p>
                     </div>
                     <div class="col-md-6">
-                        <p style="font-weight:bold;">184.00ksh</p>
+                        <p style="font-weight:bold;">{{ total }}Ksh</p>
                     </div>
                     <div class="col-md-6">
                         <p style="font-weight: bold;">Tax</p>
                     </div>
                     <div class="col-md-6">
-                        <p style="color: gold; font-weight:bold;">0.00ksh</p>
+                        <p style="color: gold; font-weight:bold;">{{ tax }}Ksh</p>
                     </div>
 
                     <div class="col-md-6" style="color: gold;">
                         <p style="font-weight: bold;">Total</p>
                     </div>
                     <div class="col-md-6">
-                        <p style="font-weight: bold;">184.00ksh</p>
+                        <p style="font-weight: bold;">{{ total }} Ksh</p>
                     </div>
                 </div>
             </div>
